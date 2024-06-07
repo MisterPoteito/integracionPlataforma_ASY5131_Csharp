@@ -1,36 +1,28 @@
-// JavaScript para el manejo del modal
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Seleccionamos el modal por su ID
-    var modal = document.getElementById('myModal');
-    // Seleccionamos el botón de cierre del modal por su clase
-    var span = document.getElementsByClassName('close')[0];
-
-    // Añadimos un evento de clic al botón de cierre
-    span.onclick = function() {
-        // Al hacer clic en el botón de cierre, ocultamos el modal
-        modal.style.display = 'none';
-    }
-
-    // Añadimos un evento de clic al objeto ventana
-    window.onclick = function(event) {
-        // Si el clic ocurre fuera del contenido del modal, ocultamos el modal
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    }
-
-    // Añadimos un evento de clic al botón de finalizar
     document.getElementById('finalizar').onclick = function() {
-        // Al hacer clic en el botón de finalizar, mostramos el modal
-        modal.style.display = 'block';
-    }
-
-    // Añadimos un evento de clic al botón de agregar producto
-    document.getElementById('agregar-producto').onclick = function() {
-        // Obtenemos el valor de la cantidad y el precio desde los campos de entrada
-        var cantidad = document.getElementById('cantidad').value;
+        // Obtenemos los valores del cliente y los productos
+        var nombre = document.getElementById('nombre').value;
+        var rut = document.getElementById('rut').value;
+        var apellido = document.getElementById('direccion').value;
+        var idProducto = document.getElementById('nombre-producto').value;
+        var nombreProducto = document.getElementById('cantidad').value;
         var precio = document.getElementById('precio').value;
-        // Calculamos el total multiplicando cantidad por precio y lo mostramos en el campo total
-        document.getElementById('total').value = (cantidad * precio).toFixed(2);
+        var descripcion = document.getElementById('descripcion').value;
+        
+        // Calculamos el total del producto multiplicando cantidad por precio
+        var total = (nombreProducto * precio).toFixed(2);
+
+        // Guardamos los datos en localStorage
+        localStorage.setItem('nombre', nombre);
+        localStorage.setItem('rut', rut);
+        localStorage.setItem('apellido', apellido);
+        localStorage.setItem('idProducto', idProducto);
+        localStorage.setItem('nombreProducto', nombreProducto);
+        localStorage.setItem('precio', precio);
+        localStorage.setItem('descripcion', descripcion);
+        localStorage.setItem('total', total);
+
+        // Redirigimos a la página de boleta
+        window.location.href = 'boleta.html';
     }
 });

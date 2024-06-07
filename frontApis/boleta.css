@@ -1,0 +1,42 @@
+/* Estilos generales para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #E6E6FA; /* Violeta claro */
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo para el título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para cada sección */
+.section {
+    margin-bottom: 20px;
+    border: 1px solid #884c4c;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #45876a; /* Verde lima */
+}
+
+/* Contenedor para los botones */
+.buttons {
+    text-align: center;
+}
+
+/* Estilo para los botones */
+.buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
