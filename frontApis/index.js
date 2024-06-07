@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // Obtenemos los valores del cliente y los productos
         var nombre = document.getElementById('nombre').value;
         var rut = document.getElementById('rut').value;
-        var apellido = document.getElementById('direccion').value;
+        var apellido = document.getElementById('apellido').value;
         var idProducto = document.getElementById('nombre-producto').value;
         var nombreProducto = document.getElementById('cantidad').value;
         var precio = document.getElementById('precio').value;
