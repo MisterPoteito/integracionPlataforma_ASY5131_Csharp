@@ -1,4 +1,4 @@
-﻿namespace Hola
+﻿namespace Productos
 {
     public class Producto
     {
